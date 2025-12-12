@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Hari Rathnam</title>
+
+<style>
+  :root{
+    --bg:#f6f8fb; 
+    --card:#ffffff; 
+    --muted:#6b7280; 
+    --accent:#0b74ff; 
+    --text:#0f172a; 
+    --glass:rgba(255,255,255,0.6); 
+    --radius:14px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto;
+  }
+
+  [data-theme="dark"]{
+    --bg:#071426;
+    --card:#071826;
+    --muted:#9aa7b2;
+    --accent:#58a6ff;
+    --text:#e6eef8;
+    --glass:rgba(255,255,255,0.03);
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+
+  .container{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+  }
+
+  h1{
+    margin-top:0;
+    font-size:32px;
+  }
+
+  .card{
+    background:var(--card);
+    padding:24px;
+    border-radius:var(--radius);
+    box-shadow:0 6px 18px rgba(2,6,23,0.06);
+  }
+
+  a{
+    color:var(--accent);
+    text-decoration:none;
+  }
+
+  .btn{
+    background:var(--accent);
+    color:white;
+    padding:8px 16px;
+    border-radius:8px;
+    display:inline-block;
+    margin-top:12px;
+    text-decoration:none;
+    font-weight:600;
+  }
+
+  .top-links{
+    margin-bottom:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .toggle{
+    cursor:pointer;
+    padding:6px 12px;
+    border-radius:8px;
+    background:var(--glass);
+    color:var(--muted);
+  }
+
+  footer{
+    margin-top:40px;
+    text-align:center;
+    color:var(--muted);
+    font-size:14px;
+    padding-bottom:20px;
+  }
+
+  input, textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-top:6px;
+    margin-bottom:16px;
+    background:var(--glass);
+    color:var(--text);
+  }
+
+  textarea{
+    height:120px;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- Navigation -->
+  <div class="top-links">
+    <a href="index.html" class="link">← Back to Portfolio</a>
+    <button id="themeToggle" class="toggle">Toggle dark</button>
+  </div>
+
+  <div class="card">
+    <h1>Contact Me</h1>
+    <p>
+      Thanks for visiting my portfolio!  
+      You can reach me quickly through email or LinkedIn.  
+    </p>
+
+    <h3>Email</h3>
+    <p>
+      <a href="mailto:harirathnam9@gmail.com">harirathnam9@gmail.com</a>
+    </p>
+
+    <h3>LinkedIn</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/hari-rathnam-648157328/" target="_blank">
+        linkedin.com/in/hari-rathnam-648157328/
+      </a>
+    </p>
+
+    <hr style="border:0;border-top:1px solid #ddd;margin:24px 0">
+
+    <h3>Send a Quick Message</h3>
+    <p>Fill out this form and I will receive your message by email.</p>
+
+    <!-- Simple Form (via Formspree) -->
+    <form action="https://formspree.io/f/your-id-here" method="POST">
+      <label>Your Name</label>
+      <input type="text" name="name" required>
+
+      <label>Your Email</label>
+      <input type="email" name="_replyto" required>
+
+      <label>Your Message</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p class="small" style="color:var(--muted); font-size:13px; margin-top:6px;">
+      *Replace the form action URL with your own Formspree ID to activate the contact form.
+    </p>
+
+  </div>
+
+  <footer>
+    © 2025 Hari Rathnam
+  </footer>
+
+</div>
+
+<script>
+  // Theme Toggle
+  const btn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const stored = localStorage.getItem('theme');
+
+  if(stored === 'dark'){ root.setAttribute('data-theme','dark'); }
+
+  btn.addEventListener('click', ()=>{
+    if(root.getAttribute('data-theme') === 'dark'){
+      root.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+    } else {
+      root.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+</script>
+
+</body>
+</html>

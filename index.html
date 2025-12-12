@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hari Rathnam — Portfolio</title>
+<meta name="description" content="Hari Rathnam — 2nd year CSE student. Projects: Tourist Carbon Footprint Dashboard (Tableau), Internship at 1M1B. Skills: Python, AI/ML, MongoDB, Cloud basics, DSA practice." />
+<link rel="icon" href="data:," />
+<style>
+  :root{ --bg:#f6f8fb; --card:#ffffff; --muted:#6b7280; --accent:#0b74ff; --text:#0f172a; --glass: rgba(255,255,255,0.6); --radius:14px; font-family: Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; }
+  [data-theme="dark"]{ --bg:#071426; --card:#071826; --muted:#9aa7b2; --accent:#58a6ff; --text:#e6eef8; --glass: rgba(255,255,255,0.03); }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+  .container{max-width:980px;margin:32px auto;padding:20px}
+  .top{display:flex;align-items:center;gap:16px}
+  .avatar{width:96px;height:96px;border-radius:12px;flex:0 0 96px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#666;overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  h1{margin:0;font-size:28px}
+  .headline{color:var(--muted);margin-top:6px}
+  .row{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}
+  .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.06);flex:1;min-width:260px}
+  .small{color:var(--muted);font-size:14px}
+  .muted{color:var(--muted)}
+  .skills-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .pill{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+  .section-title{font-weight:700;margin-bottom:10px}
+  a.link{color:var(--accent);text-decoration:none}
+  .projects .preview{width:100%;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+  .projects .preview img{width:100%;height:auto;display:block}
+  .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+  footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px;padding-bottom:40px}
+  .top-right{margin-left:auto;display:flex;gap:8px;align-items:center}
+  .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:780px){.top{flex-direction:column;align-items:flex-start}.grid-2{grid-template-columns:1fr}}
+  .toggle{cursor:pointer;padding:6px 10px;border-radius:8px;background:var(--glass);color:var(--muted)}
+  .cert-list{list-style:none;padding-left:0;margin:0}
+  .cert-list li{margin-bottom:8px}
+</style>
+</head>
+<body>
+<div class="container" id="page">
+  <div class="top">
+    <!-- Profile photo: put a file named "profile.jpg" in the same folder as index.html -->
+    <div class="avatar"><img src="profile.png.jpg" alt="Hari Rathnam"></div>
+
+    <div>
+      <h1>Hari Rathnam</h1>
+      <div class="headline small">2nd Year CSE Student · Aspiring Software Engineer · Python, AI/ML & Cloud Enthusiast</div>
+      <div class="muted small">Easwari Engineering College (SRM Group) · Chennai, Tamil Nadu, India</div>
+      <div class="meta">
+        <a class="link" href="https://www.linkedin.com/in/hari-rathnam-648157328/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="link" href="https://github.com/HariRathnam-hub" target="_blank" rel="noopener">GitHub</a>
+        <a class="link" href="https://leetcode.com/u/Hari_Rathnam/" target="_blank" rel="noopener">LeetCode</a>
+        <a class="link" href="https://public.tableau.com/views/TouristCarbonFootprintDashboard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">Tableau Dashboard</a>
+      </div>
+    </div>
+
+    <div class="top-right">
+      <button id="themeToggle" class="toggle">Toggle dark</button>
+      <!-- use mailto: for contact -->
+      <a class="btn" href="harirathnam9@gmail.com">Contact</a>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:18px">
+    <div class="card" style="flex:2">
+      <div class="section-title">About</div>
+      <p><strong>Short:</strong> I’m a second-year Computer Science Engineering student passionate about building a strong foundation in software engineering. I enjoy problem solving, learning new technologies, and building practical projects.</p>
+      <p><strong>Long:</strong> I’m curious, driven, and love learning by doing. My focus areas are Python, AI/ML, cloud fundamentals (AWS & Azure), Git, agile practices, and data structures & algorithms. I build small-to-medium projects and refine them with hands-on practice, online courses, and real-world internships.</p>
+
+      <div style="margin-top:12px">
+        <div class="section-title">Skills</div>
+        <div class="small muted">Programming</div>
+        <div class="skills-list">
+          <div class="pill">Python</div><div class="pill">C++</div><div class="pill">Java</div><div class="pill">HTML</div><div class="pill">CSS</div><div class="pill">JavaScript</div><div class="pill">SQL</div>
+        </div>
+
+        <div class="small muted" style="margin-top:10px">AI / ML & Data</div>
+        <div class="skills-list">
+          <div class="pill">AIML basics</div><div class="pill">pandas</div><div class="pill">NumPy</div><div class="pill">scikit-learn</div>
+        </div>
+
+        <div class="small muted" style="margin-top:10px">Databases & Cloud</div>
+        <div class="skills-list">
+          <div class="pill">MongoDB</div><div class="pill">MySQL / SQL</div><div class="pill">AWS (Cloud Practitioner basics)</div><div class="pill">Azure (exploring)</div>
+        </div>
+
+        <div class="small muted" style="margin-top:10px">Tools</div>
+        <div class="skills-list">
+          <div class="pill">Git</div><div class="pill">VS Code</div><div class="pill">Tableau Public</div><div class="pill">Jupyter</div>
+        </div>
+
+        <div class="small muted" style="margin-top:10px">Languages & Communication</div>
+        <div class="skills-list">
+          <div class="pill">Tamil (mother tongue)</div><div class="pill">English (fluent)</div><div class="pill">Hindi (can read & write, basic speaking)</div>
+        </div>
+
+        <div class="small muted" style="margin-top:10px">Soft skills</div>
+        <div class="skills-list">
+          <div class="pill">Problem solving</div><div class="pill">Teamwork</div><div class="pill">Communication</div><div class="pill">Self-learning</div>
+        </div>
+
+        <p class="muted small" style="margin-top:12px">Regularly practising data structures & algorithms on LeetCode.</p>
+      </div>
+    </div>
+
+    <div class="card" style="flex:1;min-width:300px">
+      <div class="section-title">Profile snapshot</div>
+      <div class="small"><strong>Education:</strong> B.E. Computer Science (2024 – 2028)<br/><strong>Institution:</strong> Easwari Engineering College (SRM Group)</div>
+
+      <hr style="margin:12px 0;border:none;border-top:1px solid #efefef" />
+
+      <div class="section-title">Experience</div>
+      <div class="small"><strong>Project Intern — 1M1B (1 Million for 1 Billion)</strong><br/>
+      Nov 2025 — Present · Remote, Chennai<br/>
+      Supported environmental and sustainability projects; contributed to planning, data collection and analysis; collaborated in agile routines and reporting.</div>
+
+      <hr style="margin:12px 0;border:none;border-top:1px solid #efefef" />
+
+      <div class="section-title">Certifications</div>
+      <ul class="cert-list small">
+        <li><strong>NPTEL — Elite: Introduction to Industry 4.0 & IoT</strong> (IIT Kharagpur) — Score: 72% · Jul–Oct 2025</li>
+        <li>Accenture Nordics — Software Engineering Job Simulation (Forage) · Jun 2025</li>
+        <li>Tata Group — GenAI Powered Data Analytics (Forage) · Jun 2025</li>
+        <li>MongoDB — Building AI-Powered Search with Vector Search · Jun 2025</li>
+        <li>Introduction to Cybersecurity (Cisco) · Jun 2025</li>
+        <li>Prompt Engineering for Everyone (Cognitive Class) · May 2025</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:18px">
+    <div class="card projects" style="width:100%">
+      <div class="section-title">Tourist Carbon Footprint Dashboard</div>
+      <div class="small muted">Tableau Public · Python preprocessing · World Bank + public sources</div>
+      <p><strong>Problem:</strong> Travel activities contribute differently to carbon emissions — users need a way to explore impacts and identify high-impact activities by country.</p>
+      <p><strong>Your role:</strong> Cleaned & preprocessed data, built calculated fields, designed the interactive dashboard for end users to filter by country and activity type and compare footprints.</p>
+
+      <!-- dashboard preview image: put a file named "dashboard.jpg" in the same folder as index.html -->
+      <div style="margin-top:12px" class="projects-preview">
+        <div class="projects preview">
+          <div class="preview"><img src="dashboard.png.png" alt="Tourist Carbon Footprint Dashboard preview"></div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px" class="small muted">Insights: Users can filter by country and activity type to find which activities (e.g., transport, accommodation, food) are most carbon-intensive and compare across destinations. <a class="link" href="https://public.tableau.com/views/TouristCarbonFootprintDashboard/Dashboard1?:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">View live dashboard</a></div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:18px">
+  <div class="card" style="width:100%">
+    <div class="section-title">Other Projects & Practice</div>
+
+    <p class="small">
+      I regularly practice Data Structures & Algorithms on LeetCode to strengthen my problem-solving skills:
+      <a class="link" href="https://leetcode.com/u/Hari_Rathnam/" target="_blank" rel="noopener">leetcode.com/u/Hari_Rathnam/</a>.
+    </p>
+
+    <p class="small">
+      I also build small experimental projects while learning new technologies.  
+      More projects will be added to this portfolio soon.
+    </p>
+  </div>
+</div>
+
+
+ <footer>
+  <div class="small muted">© 2025 Hari Rathnam — All rights reserved</div>
+</footer>
+
+
+<script>
+  // theme toggle
+  const btn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const stored = localStorage.getItem('theme');
+  if(stored === 'dark'){ root.setAttribute('data-theme','dark'); }
+  btn.addEventListener('click', ()=>{
+    if(root.getAttribute('data-theme') === 'dark'){ root.removeAttribute('data-theme'); localStorage.setItem('theme','light'); }
+    else { root.setAttribute('data-theme','dark'); localStorage.setItem('theme','dark'); }
+  });
+</script>
+</body>
+</html>

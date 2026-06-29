@@ -1,195 +1,1099 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Hari Rathnam — Portfolio</title>
-<meta name="description" content="Hari Rathnam — 2nd year CSE student. Projects: Tourist Carbon Footprint Dashboard (Tableau), Internship at 1M1B. Skills: Python, AI/ML, MongoDB, Cloud basics, DSA practice." />
-<link rel="icon" href="data:," />
-<style>
-  :root{ --bg:#f6f8fb; --card:#ffffff; --muted:#6b7280; --accent:#0b74ff; --text:#0f172a; --glass: rgba(255,255,255,0.6); --radius:14px; font-family: Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; }
-  [data-theme="dark"]{ --bg:#071426; --card:#071826; --muted:#9aa7b2; --accent:#58a6ff; --text:#e6eef8; --glass: rgba(255,255,255,0.03); }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
-  .container{max-width:980px;margin:32px auto;padding:20px}
-  .top{display:flex;align-items:center;gap:16px}
-  .avatar{width:96px;height:96px;border-radius:12px;flex:0 0 96px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#666;overflow:hidden}
-  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-  h1{margin:0;font-size:28px}
-  .headline{color:var(--muted);margin-top:6px}
-  .row{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}
-  .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.06);flex:1;min-width:260px}
-  .small{color:var(--muted);font-size:14px}
-  .muted{color:var(--muted)}
-  .skills-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-  .pill{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
-  .section-title{font-weight:700;margin-bottom:10px}
-  a.link{color:var(--accent);text-decoration:none}
-  .projects .preview{width:100%;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
-  .projects .preview img{width:100%;height:auto;display:block}
-  .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-  footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px;padding-bottom:40px}
-  .top-right{margin-left:auto;display:flex;gap:8px;align-items:center}
-  .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  @media(max-width:780px){.top{flex-direction:column;align-items:flex-start}.grid-2{grid-template-columns:1fr}}
-  .toggle{cursor:pointer;padding:6px 10px;border-radius:8px;background:var(--glass);color:var(--muted)}
-  .cert-list{list-style:none;padding-left:0;margin:0}
-  .cert-list li{margin-bottom:8px}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hari Rathnam | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080B14;
+      --bg2: #0D1120;
+      --teal: #64FFDA;
+      --teal-dim: rgba(100,255,218,0.08);
+      --teal-border: rgba(100,255,218,0.2);
+      --navy: #CCD6F6;
+      --slate: #8892B0;
+      --slate-dark: #4A5568;
+      --border: rgba(255,255,255,0.06);
+      --border-strong: rgba(255,255,255,0.12);
+      --card: rgba(255,255,255,0.02);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg);
+      color: var(--navy);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(8,11,20,0.92);
+      backdrop-filter: blur(14px);
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--teal);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      color: var(--slate);
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 6rem 2.5rem 4.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--teal);
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    .hero-name {
+      font-size: clamp(42px, 7.5vw, 72px);
+      font-weight: 700;
+      line-height: 1.04;
+      color: #E6EDF8;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-tagline {
+      font-size: clamp(28px, 5vw, 50px);
+      font-weight: 600;
+      color: var(--slate-dark);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--slate);
+      line-height: 1.85;
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-desc strong { color: var(--teal); font-weight: 500; }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.75rem;
+      border: 1px solid var(--teal);
+      background: transparent;
+      color: var(--teal);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--teal-dim); }
+
+    .btn-ghost {
+      padding: 0.75rem 1.75rem;
+      border: 1px solid var(--border-strong);
+      background: transparent;
+      color: var(--navy);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.3); color: #fff; }
+
+    .social-row {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-row a {
+      color: var(--slate-dark);
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .social-row a:hover { color: var(--teal); }
+
+    .social-row i { font-size: 16px; }
+
+    /* ── SHARED LAYOUT ── */
+    hr.div { border: none; border-top: 1px solid var(--border); margin: 0 2.5rem; }
+
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 4.5rem 2.5rem;
+    }
+
+    .sec-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--teal);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .sec-title {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .sec-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+      max-width: 320px;
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.9;
+    }
+
+    .about-text p + p { margin-top: 1rem; }
+    .about-text strong { color: var(--navy); font-weight: 500; }
+
+    .stats-col { display: flex; flex-direction: column; gap: 1rem; }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .stat-num {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--navy);
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--slate-dark);
+      letter-spacing: 0.06em;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-group {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .skill-group:hover {
+      border-color: var(--teal-border);
+      background: var(--teal-dim);
+    }
+
+    .skill-group-title {
+      font-size: 11px;
+      color: var(--teal);
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.8rem;
+    }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    .skill-tag {
+      font-size: 12px;
+      color: var(--slate);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      padding: 0.2rem 0.55rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+      transition: border-color 0.25s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal), #7B61FF);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .project-card:hover { border-color: var(--teal-border); transform: translateY(-3px); }
+    .project-card:hover::before { opacity: 1; }
+
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .project-icon { font-size: 26px; line-height: 1; }
+
+    .project-links { display: flex; gap: 0.75rem; }
+
+    .project-links a {
+      color: var(--slate-dark);
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .project-links a:hover { color: var(--teal); }
+
+    .project-name {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+      transition: color 0.2s;
+      line-height: 1.3;
+    }
+
+    .project-card:hover .project-name { color: var(--teal); }
+
+    .project-meta {
+      font-size: 11px;
+      color: var(--slate-dark);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.04em;
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: var(--slate);
+      line-height: 1.75;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .stack-tag {
+      font-size: 11px;
+      color: var(--teal);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.04em;
+    }
+
+    .stack-tag::before { content: '# '; color: var(--slate-dark); }
+
+    /* ── EXPERIENCE ── */
+    .exp-item {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .exp-timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .exp-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--teal);
+      border: 2px solid var(--bg);
+      outline: 1px solid var(--teal);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .exp-line {
+      flex: 1;
+      width: 1px;
+      background: var(--border);
+      min-height: 30px;
+      margin-top: 6px;
+    }
+
+    .exp-role {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+    }
+
+    .exp-company {
+      font-size: 13px;
+      color: var(--teal);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-period {
+      font-size: 11px;
+      color: var(--slate-dark);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .exp-bullets li {
+      font-size: 14px;
+      color: var(--slate);
+      line-height: 1.65;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .exp-bullets li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-size: 12px;
+      top: 2px;
+    }
+
+    .exp-bullets strong { color: var(--navy); font-weight: 500; }
+
+    /* ── CERTIFICATIONS ── */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .cert-item {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      background: var(--card);
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+
+    .cert-item:hover { border-color: var(--teal-border); }
+
+    .cert-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+    }
+
+    .cert-name {
+      font-size: 13px;
+      color: var(--navy);
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      line-height: 1.35;
+    }
+
+    .cert-issuer {
+      font-size: 11px;
+      color: var(--slate-dark);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── ACHIEVEMENT BANNER ── */
+    .achievement-banner {
+      border: 1px solid rgba(123,97,255,0.25);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      background: rgba(123,97,255,0.04);
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    .achievement-banner .ach-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .ach-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .ach-desc {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .edu-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.4rem;
+      transition: border-color 0.2s;
+    }
+
+    .edu-card:hover { border-color: var(--teal-border); }
+
+    .edu-degree {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .edu-school {
+      font-size: 13px;
+      color: var(--teal);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.35rem;
+    }
+
+    .edu-detail {
+      font-size: 12px;
+      color: var(--slate-dark);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── LANGUAGES ── */
+    .lang-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .lang-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.6rem 1rem;
+    }
+
+    .lang-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .lang-level {
+      font-size: 11px;
+      color: var(--slate-dark);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── CONTACT ── */
+    .contact-wrap {
+      text-align: center;
+      padding: 5rem 2.5rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .contact-title {
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+
+    .contact-desc {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .contact-links a {
+      color: var(--slate-dark);
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .contact-links a:hover { color: var(--teal); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #2D3748;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { gap: 1rem; }
+      .hero { padding: 4rem 1.25rem 3rem; }
+      .section { padding: 3rem 1.25rem; }
+      hr.div { margin: 0 1.25rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .sec-title::after { display: none; }
+    }
+  </style>
 </head>
 <body>
-<div class="container" id="page">
-  <div class="top">
-    <!-- Profile photo: put a file named "profile.jpg" in the same folder as index.html -->
-    <div class="avatar"><img src="profile.png.jpg" alt="Hari Rathnam"></div>
 
-    <div>
-      <h1>Hari Rathnam</h1>
-      <div class="headline small">2nd Year CSE Student · Aspiring Software Engineer · Python, AI/ML & Cloud Enthusiast</div>
-      <div class="muted small">Easwari Engineering College (SRM Group) · Chennai, Tamil Nadu, India</div>
-      <div class="meta">
-        <a class="link" href="https://www.linkedin.com/in/hari-rathnam-648157328/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="link" href="https://github.com/HariRathnam-hub" target="_blank" rel="noopener">GitHub</a>
-        <a class="link" href="https://leetcode.com/u/Hari_Rathnam/" target="_blank" rel="noopener">LeetCode</a>
-        <a class="link" href="https://public.tableau.com/views/TouristCarbonFootprintDashboard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">Tableau Dashboard</a>
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#">hari.dev</a>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#certifications">certs</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Hi, my name is</p>
+    <h1 class="hero-name">Hari Rathnam.</h1>
+    <h2 class="hero-tagline">I build things for the future.</h2>
+    <p class="hero-desc">
+      3rd-year CSE student at <strong>Easwari Engineering College (SRM Group)</strong>, Chennai — CGPA 8.65. Focused on AI/ML, cloud systems, and turning data into meaningful products. <strong>AWS Certified Cloud Practitioner</strong>. DSA peer tutor. Hackathon builder. Learning every day.
+    </p>
+    <div class="hero-ctas">
+      <a href="Hari_Rathnam_Resume_Final__6___1_.pdf" class="btn-primary" target="_blank">View Resume</a>
+      <a href="#contact" class="btn-ghost">Get In Touch</a>
+    </div>
+    <div class="social-row">
+      <a href="https://www.linkedin.com/in/hari-rathnam-648157328/" target="_blank">
+        <i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn
+      </a>
+      <a href="https://github.com/HariRathnam-hub" target="_blank">
+        <i class="ti ti-brand-github" aria-hidden="true"></i> GitHub
+      </a>
+      <a href="https://leetcode.com/u/Hari_Rathnam/" target="_blank">
+        <i class="ti ti-code" aria-hidden="true"></i> LeetCode
+      </a>
+      <a href="mailto:harirathnam9@gmail.com">
+        <i class="ti ti-mail" aria-hidden="true"></i> harirathnam9@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <hr class="div" />
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <p class="sec-label">01. about</p>
+    <h2 class="sec-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a CS undergraduate who believes the best way to learn is by building. My journey started with Python and has grown into AI/ML pipelines, cloud platforms, full-stack prototypes, and teaching DSA to peers.</p>
+        <p>Currently deepening my skills in <strong>data structures &amp; algorithms</strong>, <strong>system design</strong>, and <strong>cloud architecture</strong>. I recently delivered a functional prototype in a 48-hour hackathon — earning an internship offer from it — and I bring that same build-under-pressure mentality to every project.</p>
+        <p>I'm actively seeking <strong>software engineering internships</strong> in AI/ML, cloud, or full-stack domains. Open to hackathons and open-source collaborations too. Let's connect if you're building something interesting.</p>
+      </div>
+      <div class="stats-col">
+        <div class="stat-card">
+          <div class="stat-num">8.65</div>
+          <div class="stat-label">CGPA / 10</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2028</div>
+          <div class="stat-label">Expected graduation</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Certifications earned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">20+</div>
+          <div class="stat-label">Students mentored in DSA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div" />
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <p class="sec-label">02. skills</p>
+    <h2 class="sec-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <p class="skill-group-title">Languages</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Libraries &amp; Frameworks</p>
+        <div class="skill-tags">
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">scikit-learn</span>
+          <span class="skill-tag">pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Matplotlib</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Cloud &amp; Databases</p>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Tools &amp; Platforms</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">Jupyter</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">CS Fundamentals</p>
+        <div class="skill-tags">
+          <span class="skill-tag">DSA</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">System Design</span>
+          <span class="skill-tag">Competitive Prog.</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Soft Skills</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Teamwork</span>
+          <span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Mentoring</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div" />
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <p class="sec-label">03. projects</p>
+    <h2 class="sec-title">Things I've Built</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">🏥</span>
+          <div class="project-links">
+            <a href="https://github.com/HariRathnam-hub" target="_blank" title="GitHub" aria-label="GitHub"><i class="ti ti-brand-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-name">Smart Hospital Queue Management System</h3>
+        <p class="project-meta">Java · DSA · 2026</p>
+        <p class="project-desc">
+          Engineered a min-heap priority queue to schedule patients by severity, simulating a 40% reduction in average wait time. Implemented multi-doctor load balancing ensuring no resource exceeded 80% utilisation — with full edge-case coverage including emergency triage and doctor unavailability.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Java</span>
+          <span class="stack-tag">Priority Queue</span>
+          <span class="stack-tag">Min-Heap</span>
+          <span class="stack-tag">Load Balancing</span>
+          <span class="stack-tag">DSA</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">🏙️</span>
+          <div class="project-links">
+            <a href="https://github.com/HariRathnam-hub" target="_blank" title="GitHub" aria-label="GitHub"><i class="ti ti-brand-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-name">Urban Crowd Detection &amp; Breakdown Prediction</h3>
+        <p class="project-meta">Python · ML · 2026</p>
+        <p class="project-desc">
+          Built an ML classification pipeline to detect abnormal crowd density in real time and predict congestion events up to 10 minutes ahead — achieving 85%+ F1-score. Designed for 1,000+ data points/minute throughput, viable for smart-city and high-footfall public venue deployment.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">scikit-learn</span>
+          <span class="stack-tag">ML Pipeline</span>
+          <span class="stack-tag">Feature Engineering</span>
+          <span class="stack-tag">Smart City</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">🌍</span>
+          <div class="project-links">
+            <a href="https://public.tableau.com/views/TouristCarbonFootprintDashboard/Dashboard1" target="_blank" title="Live Dashboard" aria-label="Live Dashboard"><i class="ti ti-external-link" aria-hidden="true"></i></a>
+            <a href="https://github.com/HariRathnam-hub" target="_blank" title="GitHub" aria-label="GitHub"><i class="ti ti-brand-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-name">Tourist Carbon Footprint Dashboard</h3>
+        <p class="project-meta">Tableau · Python · 2025</p>
+        <p class="project-desc">
+          Built end-to-end: World Bank data sourcing → Python cleaning across 5+ tourism categories → 4 interactive Tableau dashboards with dynamic filters and calculated fields. Enables data-driven sustainability reporting and carbon emission trend analysis for non-technical stakeholders.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Tableau</span>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">pandas</span>
+          <span class="stack-tag">World Bank Data</span>
+          <span class="stack-tag">Data Viz</span>
+        </div>
+      </div>
+
+      <div class="project-card" style="border-style: dashed; opacity: 0.45; justify-content: center; align-items: center; min-height: 200px;">
+        <div style="text-align: center; color: var(--slate-dark); font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+          <i class="ti ti-plus" style="font-size: 22px; display: block; margin-bottom: 0.5rem;" aria-hidden="true"></i>
+          Next project coming soon...
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="div" />
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <p class="sec-label">04. experience</p>
+    <h2 class="sec-title">Where I've Worked</h2>
+
+    <div class="exp-item">
+      <div class="exp-timeline">
+        <div class="exp-dot"></div>
+        <div class="exp-line"></div>
+      </div>
+      <div>
+        <h3 class="exp-role">DSA &amp; LeetCode Peer Tutor</h3>
+        <p class="exp-company">SRM Easwari Engineering College</p>
+        <p class="exp-period">Nov 2025 – Jan 2026 · Chennai</p>
+        <ul class="exp-bullets">
+          <li>Appointed by faculty to lead weekly DSA sessions for <strong>20+ first-year students</strong>, covering Big-O analysis, dynamic programming, greedy algorithms, and recursion.</li>
+          <li>Guided students through <strong>40+ LeetCode problems</strong> with structured problem-solving frameworks; provided personalized feedback on time/space complexity optimisations.</li>
+          <li>Consistently received positive peer feedback on clarity and depth of explanations, strengthening technical communication skills.</li>
+        </ul>
       </div>
     </div>
 
-    <div class="top-right">
-      <button id="themeToggle" class="toggle">Toggle dark</button>
-      <!-- use mailto: for contact -->
-      <a class="btn" href="contact.html">Contact</a>
-    </div>
-  </div>
-
-  <div class="row" style="margin-top:18px">
-    <div class="card" style="flex:2">
-      <div class="section-title">About</div>
-      <p><strong>Short:</strong> I’m a second-year Computer Science Engineering student passionate about building a strong foundation in software engineering. I enjoy problem solving, learning new technologies, and building practical projects.</p>
-      <p><strong>Long:</strong> I’m curious, driven, and love learning by doing. My focus areas are Python, AI/ML, cloud fundamentals (AWS & Azure), Git, agile practices, and data structures & algorithms. I build small-to-medium projects and refine them with hands-on practice, online courses, and real-world internships.</p>
-
-      <div style="margin-top:12px">
-        <div class="section-title">Skills</div>
-        <div class="small muted">Programming</div>
-        <div class="skills-list">
-          <div class="pill">Python</div><div class="pill">C++</div><div class="pill">Java</div><div class="pill">HTML</div><div class="pill">CSS</div><div class="pill">JavaScript</div><div class="pill">SQL</div>
-        </div>
-
-        <div class="small muted" style="margin-top:10px">AI / ML & Data</div>
-        <div class="skills-list">
-          <div class="pill">AIML basics</div><div class="pill">pandas</div><div class="pill">NumPy</div><div class="pill">scikit-learn</div>
-        </div>
-
-        <div class="small muted" style="margin-top:10px">Databases & Cloud</div>
-        <div class="skills-list">
-          <div class="pill">MongoDB</div><div class="pill">MySQL / SQL</div><div class="pill">AWS (Cloud Practitioner basics)</div><div class="pill">Azure (exploring)</div>
-        </div>
-
-        <div class="small muted" style="margin-top:10px">Tools</div>
-        <div class="skills-list">
-          <div class="pill">Git</div><div class="pill">VS Code</div><div class="pill">Tableau Public</div><div class="pill">Jupyter</div>
-        </div>
-
-        <div class="small muted" style="margin-top:10px">Languages & Communication</div>
-        <div class="skills-list">
-          <div class="pill">Tamil (mother tongue)</div><div class="pill">English (fluent)</div><div class="pill">Hindi (can read & write, basic speaking)</div>
-        </div>
-
-        <div class="small muted" style="margin-top:10px">Soft skills</div>
-        <div class="skills-list">
-          <div class="pill">Problem solving</div><div class="pill">Teamwork</div><div class="pill">Communication</div><div class="pill">Self-learning</div>
-        </div>
-
-        <p class="muted small" style="margin-top:12px">Regularly practising data structures & algorithms on LeetCode.</p>
+    <div class="exp-item">
+      <div class="exp-timeline">
+        <div class="exp-dot"></div>
+        <div class="exp-line"></div>
+      </div>
+      <div>
+        <h3 class="exp-role">Data Science Intern</h3>
+        <p class="exp-company">1M1B Green Internship (1 Million for 1 Billion)</p>
+        <p class="exp-period">Dec 2025 – Jan 2026 · Remote, Chennai</p>
+        <ul class="exp-bullets">
+          <li>Built the <strong>Tourist Carbon Footprint Dashboard</strong> in Tableau Public by cleaning and processing real-world datasets across 5+ tourism categories to surface sustainability insights.</li>
+          <li>Designed <strong>4 interactive dashboards</strong> with dynamic filters and calculated fields, enabling data-driven reporting on carbon emission trends for non-technical stakeholders.</li>
+          <li>Applied data wrangling techniques to normalise inconsistent source data, improving dashboard accuracy and reliability for environmental KPI tracking.</li>
+        </ul>
       </div>
     </div>
 
-    <div class="card" style="flex:1;min-width:300px">
-      <div class="section-title">Profile snapshot</div>
-      <div class="small"><strong>Education:</strong> B.E. Computer Science (2024 – 2028)<br/><strong>Institution:</strong> Easwari Engineering College (SRM Group)</div>
+  </section>
 
-      <hr style="margin:12px 0;border:none;border-top:1px solid #efefef" />
+  <hr class="div" />
 
-      <div class="section-title">Experience</div>
-      <div class="small"><strong>Project Intern — 1M1B (1 Million for 1 Billion)</strong><br/>
-      Nov 2025 — Present · Remote, Chennai<br/>
-      Supported environmental and sustainability projects; contributed to planning, data collection and analysis; collaborated in agile routines and reporting.</div>
+  <!-- CERTIFICATIONS -->
+  <section class="section" id="certifications">
+    <p class="sec-label">05. certifications &amp; achievements</p>
+    <h2 class="sec-title">Certifications</h2>
 
-      <hr style="margin:12px 0;border:none;border-top:1px solid #efefef" />
+    <div class="certs-grid">
 
-      <div class="section-title">Certifications</div>
-      <ul class="cert-list small">
-        <li><strong>NPTEL — Elite: Introduction to Industry 4.0 & IoT</strong> (IIT Kharagpur) — Score: 72% · Jul–Oct 2025</li>
-        <li>Accenture Nordics — Software Engineering Job Simulation (Forage) · Jun 2025</li>
-        <li>Tata Group — GenAI Powered Data Analytics (Forage) · Jun 2025</li>
-        <li>MongoDB — Building AI-Powered Search with Vector Search · Jun 2025</li>
-        <li>Introduction to Cybersecurity (Cisco) · Jun 2025</li>
-        <li>Prompt Engineering for Everyone (Cognitive Class) · May 2025</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="row" style="margin-top:18px">
-    <div class="card projects" style="width:100%">
-      <div class="section-title">Tourist Carbon Footprint Dashboard</div>
-      <div class="small muted">Tableau Public · Python preprocessing · World Bank + public sources</div>
-      <p><strong>Problem:</strong> Travel activities contribute differently to carbon emissions — users need a way to explore impacts and identify high-impact activities by country.</p>
-      <p><strong>Your role:</strong> Cleaned & preprocessed data, built calculated fields, designed the interactive dashboard for end users to filter by country and activity type and compare footprints.</p>
-
-      <!-- dashboard preview image: put a file named "dashboard.jpg" in the same folder as index.html -->
-      <div style="margin-top:12px" class="projects-preview">
-        <div class="projects preview">
-          <div class="preview"><img src="dashboard.png.png" alt="Tourist Carbon Footprint Dashboard preview"></div>
+      <div class="cert-item">
+        <div class="cert-icon">☁️</div>
+        <div>
+          <p class="cert-name">AWS Certified Cloud Practitioner</p>
+          <p class="cert-issuer">Amazon Web Services</p>
         </div>
       </div>
 
-      <div style="margin-top:12px" class="small muted">Insights: Users can filter by country and activity type to find which activities (e.g., transport, accommodation, food) are most carbon-intensive and compare across destinations. <a class="link" href="https://public.tableau.com/views/TouristCarbonFootprintDashboard/Dashboard1?:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">View live dashboard</a></div>
+      <div class="cert-item">
+        <div class="cert-icon">🤖</div>
+        <div>
+          <p class="cert-name">Introduction to Generative AI</p>
+          <p class="cert-issuer">Amazon Web Services · 2026</p>
+        </div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">🌩️</div>
+        <div>
+          <p class="cert-name">Introduction to Cloud 101</p>
+          <p class="cert-issuer">Amazon Web Services · 2026</p>
+        </div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">🔷</div>
+        <div>
+          <p class="cert-name">Prompt Design in Vertex AI</p>
+          <p class="cert-issuer">Google Cloud</p>
+        </div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">⚙️</div>
+        <div>
+          <p class="cert-name">Introduction to Industry 4.0 &amp; IIoT</p>
+          <p class="cert-issuer">NPTEL · IIT Kharagpur · Nov 2025</p>
+        </div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">🍃</div>
+        <div>
+          <p class="cert-name">MongoDB Basics for Students</p>
+          <p class="cert-issuer">MongoDB</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hackathon Achievement -->
+    <div class="achievement-banner">
+      <span class="ach-icon">🏆</span>
+      <div>
+        <p class="ach-title">Hackathon Internship Win</p>
+        <p class="ach-desc">Secured an internship offer through a hackathon competition — delivered a functional prototype within a <strong style="color: var(--navy);">48-hour window</strong> as part of a cross-functional team, demonstrating ability to build under pressure.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div" />
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <p class="sec-label">06. education</p>
+    <h2 class="sec-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <p class="edu-degree">B.E. Computer Science &amp; Engineering</p>
+        <p class="edu-school">SRM Easwari Engineering College</p>
+        <p class="edu-detail">CGPA: 8.65 / 10 &nbsp;·&nbsp; 2024 – 2028 (Expected)</p>
+        <p class="edu-detail" style="margin-top: 0.3rem;">Chennai, Tamil Nadu · Anna University</p>
+      </div>
+      <div class="edu-card">
+        <p class="edu-degree">HSC — Class XII</p>
+        <p class="edu-school">St. Joseph Matriculation Hr. Sec. School</p>
+        <p class="edu-detail">Score: 90% &nbsp;·&nbsp; 2024</p>
+      </div>
+      <div class="edu-card">
+        <p class="edu-degree">SSLC — Class X</p>
+        <p class="edu-school">St. Joseph Matriculation Hr. Sec. School</p>
+        <p class="edu-detail">Score: 91% &nbsp;·&nbsp; 2022</p>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <p style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--teal); letter-spacing:0.13em; text-transform:uppercase; margin-top:2.5rem; margin-bottom:1rem;">Languages</p>
+    <div class="lang-row">
+      <div class="lang-pill">
+        <span class="lang-name">Tamil</span>
+        <span class="lang-level">C2 · Bilingual</span>
+      </div>
+      <div class="lang-pill">
+        <span class="lang-name">English</span>
+        <span class="lang-level">B2 · Upper Intermediate</span>
+      </div>
+      <div class="lang-pill">
+        <span class="lang-name">Hindi</span>
+        <span class="lang-level">A2 · Elementary</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div" />
+
+  <!-- CONTACT -->
+  <div class="contact-wrap" id="contact">
+    <p class="sec-label" style="text-align:center; margin-bottom:1rem;">07. contact</p>
+    <h2 class="contact-title">Let's Build Something</h2>
+    <p class="contact-desc">
+      I'm actively looking for software engineering internships, hackathon teams, and open-source collaborations in AI/ML, cloud, or full-stack domains. Whether you have an opportunity, a project idea, or just want to connect — my inbox is open.
+    </p>
+    <a href="mailto:harirathnam9@gmail.com" class="btn-primary">Say Hello</a>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/hari-rathnam-648157328/" target="_blank"><i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/HariRathnam-hub" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i> GitHub</a>
+      <a href="https://leetcode.com/u/Hari_Rathnam/" target="_blank"><i class="ti ti-code" aria-hidden="true"></i> LeetCode</a>
+      <a href="tel:+919843118727"><i class="ti ti-phone" aria-hidden="true"></i> +91 98431 18727</a>
     </div>
   </div>
 
-  <div class="row" style="margin-top:18px">
-  <div class="card" style="width:100%">
-    <div class="section-title">Other Projects & Practice</div>
+  <footer>
+    <p>Designed &amp; Built by Hari Rathnam &nbsp;·&nbsp; <span style="color:var(--teal)">2025</span></p>
+  </footer>
 
-    <p class="small">
-      I regularly practice Data Structures & Algorithms on LeetCode to strengthen my problem-solving skills:
-      <a class="link" href="https://leetcode.com/u/Hari_Rathnam/" target="_blank" rel="noopener">leetcode.com/u/Hari_Rathnam/</a>.
-    </p>
-
-    <p class="small">
-      I also build small experimental projects while learning new technologies.  
-      More projects will be added to this portfolio soon.
-    </p>
-  </div>
-</div>
-<div class="row" style="margin-top:18px">
-  <div class="card" style="width:100%">
-    <div class="section-title">Resume</div>
-    <p class="small">
-      You can view or download my latest resume below:
-    </p>
-    <a class="btn" href="Hari_Rathnam_Resume.pdf" target="_blank">View Resume</a>
-  </div>
-</div>
-
- <footer>
-  <div class="small muted">© 2025 Hari Rathnam — All rights reserved</div>
-</footer>
-
-
-<script>
-  // theme toggle
-  const btn = document.getElementById('themeToggle');
-  const root = document.documentElement;
-  const stored = localStorage.getItem('theme');
-  if(stored === 'dark'){ root.setAttribute('data-theme','dark'); }
-  btn.addEventListener('click', ()=>{
-    if(root.getAttribute('data-theme') === 'dark'){ root.removeAttribute('data-theme'); localStorage.setItem('theme','light'); }
-    else { root.setAttribute('data-theme','dark'); localStorage.setItem('theme','dark'); }
-  });
-</script>
 </body>
 </html>
-
-

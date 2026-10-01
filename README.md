@@ -122,7 +122,7 @@ I enjoy building scalable applications while continuously improving my problem-s
 
 ## 📬 Connect With Me
 
-- 🌐 Portfolio: https://harirathnam-portfolio.vercel.app/
+- 🌐 Portfolio: https://my-portfolio-mu-amber-99.vercel.app/
 - 💼 LinkedIn: https://linkedin.com/in/hari-rathnam-648157328
 - 💻 GitHub: https://github.com/HariRathnam-hub
 - 📧 Email: harirathnam9@gmail.com

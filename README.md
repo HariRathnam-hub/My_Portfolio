@@ -7,7 +7,7 @@
 A modern, responsive portfolio built to showcase my projects, technical skills, certifications, and software engineering journey.
 
 ### 🔗 Live Demo
-**https://harirathnam-portfolio.vercel.app/**
+**https://my-portfolio-mu-amber-99.vercel.app/**
 
 </div>
 
